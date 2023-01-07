@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GifController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 //Public routes
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/gifs/search', [GifController::class, 'search']);
+Route::get('/articles', [ArticleController::class, 'index']);
+Route::get('/articles/slug/{title}', [ArticleController::class, 'find']);
 
 //Protected routes
 Route::group(
@@ -29,7 +33,8 @@ Route::group(
         Route::get('/user/check', [AuthController::class, 'checkAuth']);
         Route::post('/logout', [AuthController::class, 'logout']);
 
-        Route::get('/articles', [ArticleController::class, 'index']);
-        Route::post('/articles', [ArticleController::class, 'store']);
+        Route::get('/admin/articles', [ArticleController::class, 'getMyArticles']);
+        Route::post('/admin/articles/gifs/add/{id}', [ArticleController::class, 'uploadGifs']);
+        Route::post('/admin/articles', [ArticleController::class, 'store']);
     }
 );

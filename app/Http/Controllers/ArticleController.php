@@ -27,8 +27,24 @@ class ArticleController extends Controller
         return $this->articleService->getAll();
     }
 
+    public function getMyArticles()
+    {
+
+        return $this->articleService->getMyArticles();
+    }
+
     public function store(Request $request)
     {
         return $this->articleService->newArticle($request);
+    }
+
+    public function uploadGifs(Request $request, $id)
+    {
+        return $this->articleService->uploadGifs($request, $id);
+    }
+
+    public function find($title)
+    {
+        return $this->articleService->findByTitle($title);
     }
 }
