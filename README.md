@@ -7,11 +7,11 @@
 ``````
 
 ### In project path
-comopser update
 ``````
+comopser update
+
 
 ### migrate database tables after make DB with name (mediaAppDB), you can change the name from .env file
-php artisan migrate
 ``````
+php artisan migrate
 
-### enjoy
