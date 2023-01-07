@@ -13,6 +13,10 @@ comopser update
 ``````
 php artisan migrate
 ``````
+### - run project (notice that this port needs to be equale with url in VueJs project)
+``````
+php artisan serve --host=0.0.0.0 --port=3030
+``````
 
 # Note
 The url configuration with nodejs is in (app\Services\GifService) with (providerUrl) variable
