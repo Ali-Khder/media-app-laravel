@@ -14,3 +14,6 @@ comopser update
 php artisan migrate
 ``````
 
+# Note
+The url configuration with nodejs is in (app\Services\GifService) with (providerUrl) variable
+
