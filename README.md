@@ -5,11 +5,11 @@
 
 ### setup xampp or any provider to turn on apache and MYSQL from link: https://www.apachefriends.org/
 
-### In project path
+### - In project path
 ```
 comopser update
 ```
-### migrate database tables after make DB with name (mediaAppDB), you can change the name from .env file
+### - migrate database tables after make DB with name (mediaAppDB), you can change the name from .env file
 ``````
 php artisan migrate
 ``````
